@@ -1,0 +1,11 @@
+header {
+  display: flex;                       /* Makes items align horizontally */
+  justify-content: space-between;      /* Puts space between left, center, right */
+  align-items: center;                 /* Centers vertically */
+  padding: 10px 20px;
+                
+}
+
+header ul li{
+    list-style: none;
+}
