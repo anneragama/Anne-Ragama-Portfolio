@@ -1,11 +1,274 @@
-header {
-  display: flex;                       /* Makes items align horizontally */
-  justify-content: space-between;      /* Puts space between left, center, right */
-  align-items: center;                 /* Centers vertically */
-  padding: 10px 20px;
-                
+/* ===============================
+   Global Styles
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-header ul li{
-    list-style: none;
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9fafc;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===============================
+   Header Styles
+================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap; /* Ensures it wraps on small screens */
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #222;
+}
+
+header b {
+  color: #2252A5;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #2252A5;
+}
+
+header img {
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+   Main Section (About + Image)
+================================== */
+.main {
+  display: flex;
+  gap: 40px;
+  margin: 40px 0;
+  align-items: center;
+  flex-wrap: wrap; /* Stacks on smaller screens */
+}
+
+.about {
+  flex: 1;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2252A5;
+}
+
+.about p {
+  font-size: 1.1rem;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   Projects Section
+================================== */
+.projects {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #2252A5;
+  margin-bottom: 10px;
+}
+
+.projects p {
+  margin-bottom: 20px;
+}
+
+.projects a {
+  margin: 10px;
+  display: inline-block;
+}
+
+.projects img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* ===============================
+   Skills Section
+================================== */
+.skills {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  color: #2252A5;
+  margin-bottom: 20px;
+}
+
+.skills ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.skills ul li img {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.skills ul li img:hover {
+  transform: scale(1.2);
+}
+
+/* ===============================
+   Contacts Section
+================================== */
+.contacts {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.contacts h2 {
+  font-size: 2rem;
+  color: #2252A5;
+  margin-bottom: 20px;
+}
+
+.contacts ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contacts ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contacts ul li img {
+  width: 25px;
+  height: 25px;
+}
+
+/* ===============================
+   Footer Styles
+================================== */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+footer a {
+  color: #2252A5;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #011F65;
+}
+
+/* ===============================
+   Responsive Styles
+================================== */
+
+/* Tablets (max-width 992px) */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projects img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+/* Mobile (max-width 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skills ul {
+    gap: 20px;
+  }
+
+  .contacts ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
